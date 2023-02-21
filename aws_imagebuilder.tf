@@ -37,7 +37,7 @@ resource "aws_imagebuilder_component" "example" {
 
 
 resource "aws_imagebuilder_distribution_configuration" "example" {
-  name = "manual_build_example-85fe2384-540c-47cb-a71c-36ad44083c59"
+  name = "build_example"
   distribution {
     ami_distribution_configuration {
       ami_tags = {
@@ -68,7 +68,7 @@ resource "aws_imagebuilder_image_pipeline" "example" {
 }
 
 resource "aws_imagebuilder_infrastructure_configuration" "example" {
-  name = "manual_build_example-85fe2384-540c-47cb-a71c-36ad44083c59"
+  name = "build_example"
   instance_profile_name = "EC2InstanceProfileForImageBuilder"
   terminate_instance_on_failure = true
 }
